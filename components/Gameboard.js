@@ -107,14 +107,14 @@ export default function Gameboard () {
     setNbrOfThrowsLeft(nbrOfThrowsLeft - 1);
   }
 
-  function countSpots (value) {
+  function countSpots (val) {
     let sum = 0;
     for (let i = 0; i < board.length; i++) {
-      if (board[i].endsWith(value + 1)) {
-        sum += value + 1;
+      if (board[i].endsWith(val + 1)) {
+        sum += val + 1;
       }
     }
-    selected[value] = sum;
+    selected[val] = sum;
     setTotal(total + sum)
   }
 
@@ -150,7 +150,7 @@ export default function Gameboard () {
     if (rounds === 0 && nbrOfThrowsLeft === 0) {
       setStatus("Game Over! All points are selected.");
     }
-    if (selectedPoints.every(value => value === true)) {
+    if (selectedPoints.every(val => val === true)) {
       setStatus(
         "Game Over! All points are selected. Please push Restart game to play again"
       );

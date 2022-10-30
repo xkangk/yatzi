@@ -1,5 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
-import { Text, View } from 'react-native';
+
+import { View } from 'react-native';
 import styles from './styles/styles';
 import React from 'react';
 import Header from './components/Header';
@@ -9,7 +9,6 @@ import Gameboard from './components/Gameboard';
  export default function App() {
   return (
     <View style={styles.container}>
-
         <Header />
         <Gameboard />
         <Footer />
